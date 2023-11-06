@@ -1,4 +1,4 @@
-instructions are 2 bits long
+instructions are 2 bytes long
 
 | Opcode | Description |
 |--------|-------------|
