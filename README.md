@@ -1,5 +1,5 @@
 Simplified ISA based on CHIP-8
-* instructions are 2 bytes long
+* instructions are 16 bits long
 * registers are V0-VF
 * all registers are 8 bits (0x00-0xFF) (0-255)
 * VF is reserved for flags for some math ops (carry, borrow, etc)
@@ -28,5 +28,4 @@ Simplified ISA based on CHIP-8
 | B1XY | BitOp | VX = VX \ VY | or VX VY | Set VX to VX OR VY |
 | B2XY | BitOp | VX = VX ^ VY | xor VX VY | Set VX to VX XOR VY |
 | B3XY | BitOp | VX = ~VX | not VX | Set VX to NOT VX |
-
 
