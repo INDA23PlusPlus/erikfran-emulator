@@ -1,3 +1,5 @@
+use std::env::args;
+
 fn main() {
-    emulator::run();
+    emulator::run(&args().nth(1).expect("No file path provided"));
 }

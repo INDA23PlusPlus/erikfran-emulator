@@ -34,12 +34,10 @@ Simplified instructionset based on CHIP-8
 #![feature(slice_as_chunks)]
 #![feature(iter_array_chunks)]
 use std::fmt::Display;
-use std::{fs, env::args};
+use std::fs;
 
-pub fn run() {
-    let path = args().nth(1).expect("No file path provided");
-
-    let input = fs::read(&path).expect("Bad path");
+pub fn run(path: &str) {
+    let input = fs::read(path).expect("Bad path");
     let program_size = (input.len() / 2) as u8;
     let rom = u8Array::<512>::from(input);
 

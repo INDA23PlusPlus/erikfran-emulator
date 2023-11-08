@@ -32,7 +32,7 @@ Simplified instructionset based on CHIP-8
 
 */
 
-use std::{fs, env::args, str::SplitWhitespace, collections::HashMap, iter::Peekable};
+use std::{fs, str::SplitWhitespace, collections::HashMap, iter::Peekable};
 
 enum Label {
     Label(String),
@@ -58,10 +58,8 @@ enum Instructions {
     Xor(Label, Label),
     Not(Label),
 }
-pub fn run() {
-    let path = args().nth(1).expect("No file path provided");
-
-    let t = fs::read_to_string(&path)
+pub fn run(path: &str) {
+    let t = fs::read_to_string(path)
         .expect("Bad path");
 
     let mut input = t

@@ -1,3 +1,5 @@
+use std::env::args;
+
 fn main() {
-    assembler::run();
+    assembler::run(&args().nth(1).expect("No file path provided"));
 }
