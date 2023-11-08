@@ -20,7 +20,7 @@ Simplified instructionset based on CHIP-8
 | 5XNN | Reg | VX = NN | setrm | Set VX to NN |
 | 6XAA | Reg | VX = AA | setrc VX AA | Set VX to AA |
 | 700X | PC | PC = VX | setpcr VX | Set PC to VX |
-| 8XNN | Mem | NN = VX | setmr NN VX | Set memory address NN to VX |
+| 8XNN | Mem | NN = VX | setmr VX NN | Set memory address NN to VX |
 | 90XY | Math | VX = VX + VY | add VX VY | Add VX to VY and store the result in VX. If the result is greater than 255 (0xFF), set the carry flag VF to 1, otherwise set VF to 0 |
 | 91XY | Math | VX = VX - VY | sub VX VY | Subtract VY from VX and store the result in VX. If VY is greater than VX, set the borrow flag VF to 1, otherwise set VF to 0 |
 | A0XY | BitOp | VX = VX & VY | and VX VY | Set VX to VX AND VY |
