@@ -12,7 +12,7 @@ Simplified instructionset based on CHIP-8
 
 | Opcode | Type | Pseudo Code | Assembly | Description |
 |-|-|-|-|-|
-| 00NN | Flow | goto(NN) | jump NN | Jump to memory address NN. Same as setting PC to NN |
+| 00NN | Flow | goto(NN) | jump NN | Set PC to NN |
 | 10XY | Cond | if VX == VY | ifeq VX VY | If VX is equal to VY, skip the next instruction |
 | 20XY | Cond | if VX != VY | ifneq VX VY | If register X is not equal to register Y, skip the next instruction |
 | 30XY | Cond | if VX < VY | ifle VX VY | If register X is less than register Y, skip the next instruction |
@@ -28,8 +28,6 @@ Simplified instructionset based on CHIP-8
 | A1XY | BitOp | VX = VX \ VY | or VX VY | Set VX to VX OR VY |
 | A2XY | BitOp | VX = VX ^ VY | xor VX VY | Set VX to VX XOR VY |
 | A3XY | BitOp | VX = ~VX | not VX | Set VX to NOT VX |
-
-
  */
 
 
